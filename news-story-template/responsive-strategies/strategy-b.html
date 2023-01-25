@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Stories List Template</title>
+    <style>[v-cloak] { display: none; } img {max-width: 100%;}</style>
+    <link rel="stylesheet" href="css/strategy-b.css"
+  </head>
+
+  <body>
+
+    <div id="news-stories-list-template" v-cloak>
+
+      <!-- The Featured Story -->
+      <div class="featured-story">
+      <h1>Featured Story</h1>
+        <!-- Story title (linked) -->
+        <a v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
+        
+        <!-- Story description -->
+        {{ featuredStory.description }}
+
+        <!-- Story date -->
+        {{ featuredStory.date }}
+
+        <!-- Story image -->
+        <img v-bind:src="featuredStory.image">
+
+        <!-- Story content (truncated) -->
+        <span v-html="featuredStory.content"></span>
+
+        <!-- Story source (linked) -->
+        <a v-bind:href="featuredStory.source.url">{{ featuredStory.source.name }}</a>
+
+      </div>
+
+      <!-- Debugging info, you can comment this section out when you don't need it. -->
+      <pre>The featured story object: {{ featuredStory | json }}</pre>
+
+      <!-- Stories List -->
+      <ul class="story-list">
+        <!-- This 'loop' generates a list item for each story in the 'stories' array. -->
+        <li v-for="story in stories">
+
+          <article>
+          
+          <!-- Story title (linked) -->
+          <h1>
+            <a v-bind:href="story.url" class="story-title">{{ story.title }}</a>
+            </h1>
+
+          <div class="item-contents">
+          <!-- Story image -->
+          <figure>
+            <img v-bind:src="story.image">
+          </figure>
+          
+          <div class="date-desc">
+          <!-- Story description -->
+          <p class="story-description">
+            {{ story.description }}
+          </p>
+          
+          <!-- Story content (truncated) -->
+          <div class="story-content">
+            <span v-html="story.content"></span>
+          </div>
+          
+          <!-- Story source (linked) -->
+          <div class="story-source-date">
+            Published by
+            <a v-bind:href="story.source.url" class="source-name"> {{ story.source.name }}</a> 
+            on
+           <!-- Story date -->
+          <span class="story-date">
+            {{ story.date }}
+          </span>
+          </div>
+        </div>
+        </div>
+
+        </article>
+        </li>
+      </ul>
+
+      <!-- Debugging info, you can comment this section out when you don't need it. -->
+      <pre>The stories array: {{ stories | json }}</pre>
+    
+    </div>
+
+    <!-- These scripts load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2023spring-resources/projects/news-story-template/data.js"></script>
+    
+  </body>
+</html>
