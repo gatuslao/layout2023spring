@@ -1,0 +1,237 @@
+body { 
+    margin: auto; 
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: sans-serif;
+}
+
+pre {
+    display: none;
+}
+
+.featured-story {
+    border: 2px solid;
+    border-color: black;
+    border-radius: 20px;
+    padding: 5%;
+    color: white;
+    background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
+    /* gradient from  https://gradients.shecodes.io/gradients/58*/
+}
+
+.featured-story h1 {
+    display: none;
+}
+
+.featured-story a:hover {
+    color: cadetblue;
+}
+
+.featured-title {
+    color: white;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px; 
+    font-size: 2.2em;
+}
+
+.featured-pub-info {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 200;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.featured-description {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.featured-figure {
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.featured-grid img {
+    border-radius: 22px;
+    border: 2px solid;
+}
+
+.featured-content {
+    padding-top: 5%;
+    font-size: 1.1em;
+}
+
+.featured-source {
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+.featured-date {
+    font-weight:lighter;
+}
+
+.story-list {
+    list-style: none;
+    padding: 0;
+}
+
+.story-list li {
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 6% 4% 6% 4%;
+    margin-top: 5%;
+}
+
+.story-list h1 {
+    margin: 0;
+    padding-bottom: 2%;
+}
+
+.story-list h1 a:hover {
+    color: cadetblue;
+}
+
+.story-title {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.story-date {
+    font-weight:lighter;
+}
+
+.story-description {
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 3%;
+    line-height: 1.3em;
+}
+
+.source-name {
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+.story-figure {
+    width: 100%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.story-list img {
+    border-radius: 22px;
+    border: 2px solid;
+}
+
+.story-content {
+    display: none;
+}
+
+.story-source-date {
+    padding-top: 5%;
+}
+
+.story-source-date a:hover {
+    color: cadetblue;
+}
+
+@media (min-width: 720px) {
+    .featured-content {
+        padding-top: 5%;
+    }
+
+    .featured-title {
+        font-size: 2.9em;
+    }
+
+    .featured-pub-info {
+        font-size: 1.15em;
+    }
+
+    .featured-description {
+        font-size: 1.35em;
+    }
+
+    .featured-content {
+        font-size: 1.2em;
+    }
+    
+    .featured-source-date {
+        font-size: 1.1em;
+    }
+
+    .story-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+    .story-list li {
+        margin: 0;
+    }
+
+    .story-description {
+        font-size: 0.95em;
+    }
+
+    .story-source-date {
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+
+    .featured-title {
+        font-size: 3em;
+    }
+
+    .featured-pub-info {
+        padding-top: 1%;
+        font-size: 1.3em;
+    }
+
+    .featured-description {
+        margin-top: 0;
+        padding-top: 1%;
+        font-size: 1.5em;
+    }
+
+    .featured-content {
+        padding-top: 0;
+        font-size: 1.2em;
+    }
+    
+    .featured-source-date {
+        font-size: 1.1em;
+    }
+
+    .story-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .story-description {
+        font-size: 0.92em;
+    }
+
+    .story-source-date {
+        font-size: 0.92em;
+    }
+
+}
