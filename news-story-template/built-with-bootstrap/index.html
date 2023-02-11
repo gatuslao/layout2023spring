@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Stories List Template</title>
+    <style>[v-cloak] { display: none; } img {max-width: 100%;}</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark">
+      <div class="container">
+        <a class="navbar-brand mb-0 display-3" href="#">Krissy News!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Breaking</a>
+            <a class="nav-link" href="#">U.S.</a>
+            <a class="nav-link" href="#">World</a>
+            <a class="nav-link" href="#">Politics</a>
+            <a class="nav-link" href="#">Business</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="news-stories-list-template" v-cloak class= "container mb-5">
+
+      <!-- The Featured Story -->
+      <!-- <h1 class="display-4">Featured Story</h1> -->
+        
+      <div class="d-lg-flex d-sm-block border border-dark rounded-2 p-3 mt-5 mb-3 bg-body-secondary">
+        <div class="p-2 flex-fill">
+          <!-- Story image -->
+          <img v-bind:src="featuredStory.image" class="rounded-2">
+        </div>
+        <div class="p-2 flex-fill col-lg-8">
+          <h5>
+            <!-- Story title (linked) -->
+            <a v-bind:href="featuredStory.url">{{ featuredStory.title }}</a>
+          </h5>
+
+          <h6>
+            <!-- Story description -->
+            {{ featuredStory.description }}
+          </h6>
+
+          <p>
+            <!-- Story content (truncated) -->
+            <span v-html="featuredStory.content"></span>
+          </p>
+
+          <small>
+            Published by
+            <!-- Story source (linked) -->
+            <a v-bind:href="featuredStory.source.url">{{ featuredStory.source.name }}</a>
+            on
+            <!-- Story date -->
+            {{ featuredStory.date }}
+          </small>
+        </div>
+    </div>
+
+      <!-- Debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The featured story object: {{ featuredStory | json }}</pre> -->
+
+      <!-- Stories List -->
+      <!-- <h1>Other Stories</h1> -->
+
+        <div class="container text-center">
+            <div class="row">
+                <div v-for="story in stories" class="col-md-6 col-lg-4 g-4">
+                    <div class="card border-dark mb-3 h-100">
+                        <!-- Story image -->
+                        <img v-bind:src="story.image" class="card-img-top">
+                        <div class="card-body">
+                        
+                        <!-- Story title (linked) -->
+                        <h5 class="card-title pb-2 text-start">
+                            <a v-bind:href="story.url">{{ story.title }}</a>
+                        </h5>
+                        
+                        <!-- Story description -->
+                        <p class="card-text text-start">{{ story.description }}</p>
+                        </div>
+            
+                        <ul class="list-group list-group-flush">
+                            <!-- <li class="list-group-item">
+                                <span v-html="story.content"></span>
+                            </li> -->
+                            <li class="list-group-item text-muted">
+                                <small>
+                                Published by 
+                                <!-- Story source (linked) -->
+                                <a v-bind:href="story.source.url">{{ story.source.name }}</a>
+                                on
+                                <!-- Story date -->
+                                {{ story.date }}
+                                </small>
+                            </li>
+                </div>
+            </div>
+        </div>
+          </div>
+
+        </li>
+      </ul>
+
+      <!-- Debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The stories array: {{ stories | json }}</pre> -->
+    
+    </div>
+
+    <!-- These scripts load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2023spring-resources/projects/news-story-template/data.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
