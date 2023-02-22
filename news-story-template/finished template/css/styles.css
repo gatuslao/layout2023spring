@@ -1,0 +1,586 @@
+body { 
+    margin: auto; 
+    font-family: sans-serif;
+    background-color: #e8e8fc;
+}
+
+pre {
+    display: none;
+}
+
+#main-nav {
+    display: none;
+}
+
+#ham-icon {
+    position: absolute;
+    right: 6%;
+    z-index: 20;
+    padding-top: 10%;
+    font-size: 1.5rem;
+    color:  #001161;
+}
+
+#wrapper{
+    /* display: grid;
+    grid-template-columns: 1fr 1.5fr; */
+    position: fixed;
+    right: 0;
+    z-index: 15;
+    height: 100%;
+    width: 60vw;
+}
+
+#nav-items {
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+    background: #B2B1E0;
+
+    height: 100vh;
+}
+
+#nav-items ul{
+    list-style: none;
+    padding: 0;
+}
+
+#nav-items ul li {
+    padding-bottom: 15px;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+#nav-items ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: quasimoda, sans-serif;
+    font-weight: 00;
+    font-style: normal;
+    font-size: 1.5rem;
+    color:  #001161;
+}
+
+#nav-items ul li a:hover {
+    background-color: #F73E69;
+    color: #F0F0F0;
+    font-family: quasimoda, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.logo-tagline ul{
+    list-style: none;
+    margin: 0;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#logo {
+    width: 5rem;
+    margin: 0;
+    border-right: 2px solid #001161;
+    padding: 1rem 1.5rem 1rem 0;
+}
+
+#tagline {
+    width: 4rem;
+    padding: 1rem 0 1rem 1.5rem;
+}
+
+#news-stories-list-template {
+    margin: auto;
+    width: 90%;
+}
+
+.featured-story {
+    border-radius: 20px;
+    padding: 2rem;
+    color: #F0F0F0;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    /* box shadow from https://getcssscan.com/css-box-shadow-examples */
+    background: rgb(0,17,97);
+    background: linear-gradient(180deg, rgba(0,17,97,1) 13%, rgba(247,62,105,1) 100%);
+    /* gradient from  https://cssgradient.io/*/
+}
+
+.featured-story h1 {
+    display: none;
+}
+
+.featured-story a:hover {
+    color: #B2B1DF;
+}
+
+.featured-title {
+    color: #F0F0F0;
+    text-decoration: none;
+    font-family: quasimoda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 2.5rem;
+    font-size: 2rem;
+}
+
+.featured-pub-info {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    padding-top: 0.8rem;
+    padding-bottom: 2.5rem;
+}
+
+.featured-description {
+    font-family: quasimoda, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+.featured-figure {
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.featured-grid img {
+    border-radius: 15px;
+}
+
+.featured-content {
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.featured-source {
+    font-style: italic;
+    color: #F0F0F0;
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+.featured-date {
+    font-weight:lighter;
+}
+
+.story-list {
+    list-style: none;
+    padding: 0;
+}
+
+.story-list li {
+    border-radius: 20px;
+    background: #dadaff;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    /* box shadow from https://getcssscan.com/css-box-shadow-examples */
+    padding: 2rem;
+    margin-top: 5%;
+}
+
+.story-list h1 {
+    margin: 0;
+    padding-bottom: 2%;
+}
+
+.story-list h1 a:hover {
+    color: #F73E69;
+}
+
+.story-title {
+    color: black;
+    text-decoration: none;
+    font-family: quasimoda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+.story-date {
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+}
+
+.story-description {
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 3%;
+    line-height: 1.3em;
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+}
+
+.source-name {
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+}
+
+.story-figure {
+    width: 100%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.story-list img {
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.story-content {
+    display: none;
+}
+
+.story-source-date {
+    padding-top: 5%;
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+}
+
+.story-source-date a:hover {
+    color: #F73E69;
+}
+
+footer {
+    background-color: #001061;
+    color: #F0F0F0;
+    margin-top: 2rem;
+}
+
+hr {
+    height: 1px;
+    color: #B2B1DF;
+    border-bottom: none;
+}
+
+#footer-logo {
+    width: 10rem;
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.footer-grid h2 {
+    margin: 0;
+    font-family: quasimoda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.footer-main-nav{
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-main-item {
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+.footer-main-nav li {
+    margin-top: 1rem;
+}
+
+.footer-main-nav a:hover {
+    color: #F73E69;
+}
+
+.legal-nav{
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.legal-nav li{
+    margin-top: 1rem;
+}
+
+.legal-nav-item {
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+.legal-nav a:hover {
+    color: #F73E69;
+}
+
+.social-nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.social-nav i {
+    margin: 1.2rem;
+}
+
+.social-nav i:hover {
+    color: #F73E69;
+}
+
+.disclosures {
+    font-family: quasimoda, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+    line-height: 1rem;
+    padding: 1rem 2rem 2.5rem 2rem;
+}
+
+.disclosures a {
+    text-decoration: none;
+    text-decoration: underline;
+    color:#F0F0F0;
+}
+
+.disclosures a:hover {
+    color: #F73E69;
+}
+
+@media (min-width: 720px) {
+    #news-stories-list-template {
+        width: 85%;
+    }
+
+    #ham-nav{
+        display: none;
+    }
+
+    #main-nav {
+        display: contents;
+    }
+
+    .logo-tagline ul{
+        list-style: none;
+        margin: 0;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: #B2B1E0;
+    }
+
+    #logo {
+        width: 10rem;
+        margin: 0;
+        border-right: 2px solid #001161;
+        padding: 1rem 1.5rem 1rem 0;
+    }
+
+    #tagline {
+        width: 9rem;
+        padding: 1rem 0 1rem 1.5rem;
+    }
+
+    nav#main-nav ul{
+        list-style: none;
+        margin: 0;
+        display: flex; 
+        justify-content: space-evenly;
+        margin-bottom: 1.5rem;
+        background-color: #001161;
+    }
+    
+    nav#main-nav ul li a {
+        display: inline-block;
+        color: #F0F0F0;
+        text-transform: uppercase;
+        font-family: quasimoda, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        padding: 0.5em 1.5em;
+        text-decoration: none;
+    }
+
+    nav#main-nav ul li a:hover {
+        background-color: #F73E69;
+        font-family: quasimoda, sans-serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .featured-content {
+        padding-top: 0.5rem;
+        line-height: 1.5rem;
+    }
+
+    .featured-title {
+        font-size: 2.9em;
+        line-height: 3.5rem;
+    }
+
+    .featured-pub-info {
+        font-size: 1.15em;
+        padding-top: 2.5rem;
+    }
+
+    .featured-description {
+        font-size: 1.35em;
+        line-height: 1.8rem;
+    }
+
+    .featured-content {
+        font-size: 1.2em;
+    }
+    
+    .featured-source-date {
+        font-size: 1.1em;
+    }
+
+    .story-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+
+    .story-list li {
+        margin: 0;
+    }
+
+    .story-description {
+        font-size: 0.95em;
+    }
+
+    .story-source-date {
+        font-size: 0.95em;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .footer-content {
+        width: 85%;
+        margin: auto;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #footer-logo {
+        margin: 0;
+    }
+
+    .footer-main-nav{
+        text-align: left;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .footer-main-nav li{
+        margin-top: 0.8rem;
+    }
+
+    .legal-nav{
+        padding: 0;
+        justify-items: center;
+        text-align: left;
+        display: list-item;
+        margin-top: 2rem;
+    }
+
+    .legal-nav li {
+        margin-top: 0.8rem;
+    }
+    
+    .social-nav {
+        margin-top: 2rem;
+    }
+
+    .social-nav i {
+        font-size: 1.2rem;
+    }
+
+    .disclosures {
+        padding-bottom: 2rem;
+    }
+    
+}
+
+@media (min-width: 1300px) {
+    #news-stories-list-template {
+        width: 80%;
+    }
+
+    .footer-content {
+        width: 90%;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+
+    .featured-title {
+        font-size: 3em;
+    }
+
+    .featured-pub-info {
+        padding-top: 1%;
+        font-size: 1.3em;
+    }
+
+    .featured-description {
+        margin-top: 0;
+        padding-top: 1%;
+        font-size: 1.5em;
+    }
+
+    .featured-content {
+        padding-top: 0;
+        font-size: 1.2em;
+    }
+    
+    .featured-source-date {
+        font-size: 1.1em;
+    }
+
+    .story-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .story-description {
+        font-size: 0.92em;
+    }
+
+    .story-source-date {
+        font-size: 0.92em;
+    }
+
+}
