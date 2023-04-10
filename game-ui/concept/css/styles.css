@@ -1,0 +1,64 @@
+body {
+    background-color: darkgray;
+}
+
+.stopwatch {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.stopwatch:active .stopwatch-background{
+    background-color: yellow;
+}
+
+.stopwatch:active .stopwatch-button {
+    transform: translateY(5%);
+}
+
+.stopwatch > *{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.stopwatch-needle {
+    transform-origin: 50% 60%; /* move needle to middle */
+}
+
+.stopwatch-background {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 50%;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%); /* percentage of element being transformed */
+    transition: background-color 0.25s;
+}
+
+.stopwatch.running .stopwatch-needle {
+    animation: needle-rotate 60s linear infinite;
+}
+
+.stopwatch.danger .stopwatch-background {
+    background-color: red;
+}
+
+.rotated {
+    transform: rotate(45deg);
+}
+
+@keyframes needle-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
