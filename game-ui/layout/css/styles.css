@@ -1,0 +1,256 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: url(../images/background/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.temporal-container {
+    width: 250px;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+
+.clock-weather {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#clock {
+    position: relative;
+    width: 115px;
+    height: 115px;
+}
+
+#clock>* {
+    position: absolute;
+}
+
+.clock-mid {
+    z-index: 4;
+    width: 15px;
+    left: 48%;
+    top: 44%;
+}
+
+.clock-hour {
+    z-index: 3;
+    height: 45px;
+    left: 50.5%;
+    top: 15%;
+}
+
+.clock-min {
+    z-index: 2;
+    width: 35px;
+    left: 54%;
+    top: 45%;
+}
+
+.clock-face {
+    width: 115px;
+}
+
+#weather {
+    position: relative;
+    width: 130px;
+    padding-left: 30px;
+}
+
+.partly-cloudy {
+    display: show;
+}
+
+.pc-sun {
+    position: absolute;
+    width: 40px;
+    z-index: -1;
+    right: 70px;
+    top: 0;
+}
+
+.cloudy {
+    display: none;
+}
+
+.sunny {
+    display: none;
+}
+
+.rainy {
+    display: none;
+}
+
+.lightning {
+    display: none;
+}
+
+.snowy {
+    display: none;
+}
+
+.night {
+    width: 80px;
+    display: none;
+}
+
+.pc-night-moon {
+    position: absolute;
+    width: 45px;
+    z-index: -1;
+    right: 75px;
+    top: -10%;
+}
+
+.partly-cloudy-night {
+    display: none;
+}
+
+.windy {
+    display: none;
+}
+
+.bird-feeder {
+    position: relative;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.seed-info {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.seeds-bar {
+    position: relative;
+    width: 450px;
+    padding-top: 10px;
+    padding-right: 90px;
+    top: 12%;
+}
+
+.seeds {
+    width: 80px;
+    padding-right: 20px;
+}
+
+#doodads-info {
+    position: fixed;
+    width: 250px;
+    height: 110px;
+    left: 2%;
+    bottom: 0;
+}
+
+#doodads-info>* {
+    position: absolute;
+}
+
+.doodads-container {
+    width: 250px;
+    bottom: 0;
+}
+
+.doodads-amount {
+    display: flex;
+    position: relative;
+    width: 250px;
+    bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.doodads {
+    width: 80px;
+    padding-right: 30px;
+}
+
+.amount {
+    margin: 0;
+    font-size: 25px;
+    font-family: "new-farm", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#inventory-info {
+    position: fixed;
+    height: 200px;
+    width: 95px;
+    top: 3%;
+    right: 0;
+}
+
+#inventory-info>* {
+    position: absolute;
+}
+
+#inventory.inventory-open #inventory-info {
+    right: 350px;
+}
+
+.shed {
+    z-index: 4;
+    width: 55px;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inventory-tab {
+    height: 200px;
+    right: 0;
+}
+
+.inside-inventory {
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background-color: #FFA192;
+    border-left: 12px solid #995037;
+    top: 0;
+    right: 0;
+}
+
+.inside-inventory>* {
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+.inventory-seed,
+.inventory-feeder {
+    display: flex;
+    position: relative;
+    width: 350px;
+    align-items: center;
+}
+
+.seed-bag,
+.simple-feeder {
+    padding-top: 20px;
+    height: 125px;
+    padding-right: 20px;
+}
+
+.inventory-seed-desc,
+.inventory-feeder-desc {
+    font-family: "new-farm", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
