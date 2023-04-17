@@ -119,6 +119,20 @@ body {
     display: none;
 }
 
+#bird-on-feeder {
+    position: fixed;
+    width: 280px;
+    height: 190px;
+    left: 65%;
+    z-index: 1;
+    transform: translate(-60%, 230%);
+}
+
+.bird {
+    position: fixed;
+    width: 280px;
+}
+
 .bird-feeder {
     position: relative;
     width: 500px;
@@ -126,11 +140,61 @@ body {
     transform: translateX(-50%);
 }
 
+.inside-seed {
+    position: fixed;
+    z-index: -1;
+    width: 302px;
+    height: 280px;
+    left: 50%;
+    transform: translate(-50%, -121%);
+}
+
+.inside-seed>* {
+    position: absolute;
+}
+
+.seed-full {
+    width: 302px;
+    display: show;
+}
+
+.seed-3quarter {
+    width: 295px;
+    bottom: 0;
+    right: 2px;
+    display: none;
+}
+
+.seed-half {
+    width: 289px;
+    left: 5.5px;
+    bottom: 0;
+    display: none;
+}
+
+.seed-quarter {
+    bottom: 0;
+    left: 9px;
+    display: none;
+}
+
 .seed-info {
     display: flex;
     position: relative;
     justify-content: center;
     padding-top: 15px;
+}
+
+.bar-status {
+    position: absolute;
+    background-color: #F0B3A2;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 430px; 
+    height: 39px;
+    border: none;
+    z-index: 7;
+    border-radius: 18px;
 }
 
 .seeds-bar {
@@ -220,6 +284,7 @@ body {
     height: 100vh;
     background-color: #FFA192;
     border-left: 12px solid #995037;
+    z-index: 6;
     top: 0;
     right: 0;
 }
