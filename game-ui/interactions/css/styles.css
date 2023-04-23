@@ -1,0 +1,424 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: url(../images/background/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.temporal-container {
+    width: 250px;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+
+.clock-weather {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#clock {
+    position: relative;
+    width: 115px;
+    height: 115px;
+}
+
+#clock>* {
+    position: absolute;
+}
+
+.clock-mid {
+    z-index: 4;
+    width: 15px;
+    left: 48%;
+    top: 44%;
+}
+
+.clock-hour {
+    z-index: 3;
+    height: 45px;
+    left: 50.5%;
+    top: 15%;
+    transform-origin: 50% 90%;
+}
+
+.clock-min {
+    z-index: 2;
+    width: 35px;
+    left: 54%;
+    top: 45%;
+    transform-origin: 4% 52%;
+}
+
+.clock-face {
+    width: 115px;
+    cursor: pointer;
+}
+
+.clock.running .clock-min {
+    animation: needle-rotate 30s linear infinite;
+}
+
+.clock.running .clock-hour {
+    animation: needle-rotate 60s linear infinite;
+}
+
+@keyframes needle-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#weather {
+    position: relative;
+    width: 130px;
+    padding-left: 30px;
+}
+
+#weather > * {
+    position: absolute;
+    width: 130px;
+    transform: translatey(-50%);
+}
+
+.weather-icon {
+    display: none;
+}
+
+.clear-moon {
+    height: 100px;
+}
+
+
+#bird-on-feeder {
+    position: fixed;
+    width: 280px;
+    height: 190px;
+    left: 65%;
+    z-index: 1;
+    transform: translate(-60%, 230%);
+}
+
+.bird {
+    position: fixed;
+    width: 280px;
+}
+
+.bird-feeder {
+    position: relative;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inside-seed {
+    position: fixed;
+    z-index: -1;
+    width: 302px;
+    height: 280px;
+    left: 50%;
+    transform: translate(-50%, -121%);
+}
+
+.inside-seed>* {
+    position: absolute;
+}
+
+.seed-full {
+    width: 302px;
+}
+
+.seed-3quarter {
+    width: 295px;
+    bottom: 0;
+    right: 2px;
+}
+
+.seed-half {
+    width: 289px;
+    left: 5.5px;
+    bottom: 0;
+}
+
+.seed-quarter {
+    bottom: 0;
+    left: 9px;
+}
+
+.seed {
+    display: none;
+}
+
+#seed-info {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.bar {
+    position: absolute;
+    background-color: #F0B3A2;
+    margin-top: 32.5px;
+    margin-left: 10px;
+    z-index: 7;
+    border: none;
+    height: 37.4px;
+    display: none;
+}
+
+.bar-status-full{
+    width: 431px;
+    border-radius: 18px;
+    transform: translateX(-125.3%);
+}
+
+.bar-status-3quarter {
+    width: 320px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-169%);
+}
+
+.bar-status-half {
+    width: 215px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-251.5%);
+}
+
+.bar-status-quarter {
+    width: 110px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-492%);
+}
+
+/* .status-display.bar-status-full .bar{
+    width: 431px;
+    border-radius: 18px;
+} */
+
+/* .status-display.bar-status-3quarter .bar{
+    width: 320px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-169%);
+} */
+
+/* .status-display.bar-status-half .bar{
+    width: 215px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-251.5%);
+} */
+
+/* .status-display.bar-status-quarter .bar{
+    width: 110px;
+    border-radius: 18px 0px 0px 18px;
+    transform: translateX(-492%);
+} */
+
+.seeds-bar {
+    position: relative;
+    width: 450px;
+    padding-top: 10px;
+    padding-right: 90px;
+    top: 15%;
+}
+
+.seeds {
+    width: 80px;
+    padding-right: 20px;
+}
+
+#seed-btn {
+    cursor: pointer;
+}
+
+.seeds:hover {
+    animation-name: jump-shake;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: all 0.5s;
+}
+
+@keyframes jump-shake {
+    from{ transform: rotate(-10deg); top:5px; }
+    to{ transform: rotate(30deg); top:20px; }
+}
+
+#doodads-info {
+    position: fixed;
+    width: 250px;
+    height: 110px;
+    left: 2%;
+    bottom: 0;
+}
+
+#doodads-info>* {
+    position: absolute;
+}
+
+.doodads-container {
+    width: 250px;
+    bottom: 0;
+}
+
+.doodads-amount {
+    display: flex;
+    position: relative;
+    width: 250px;
+    bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount::after {
+    margin: 0;
+    font-size: 40px;
+    font-family: "new-farm", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    content: counter(count);
+    animation: counter 20s linear infinite alternate;
+    counter-reset: count 0;
+}
+
+@keyframes counter {
+    0% {
+        counter-increment: count 0;
+    }
+
+    10% {
+        counter-increment: count 10;
+    }
+
+    20% {
+        counter-increment: count 20;
+    }
+
+    30% {
+        counter-increment: count 30;
+    }
+
+    40% {
+        counter-increment: count 40;
+    }
+
+    50% {
+        counter-increment: count 50;
+    }
+
+    60% {
+        counter-increment: count 60;
+    }
+
+    70% {
+        counter-increment: count 70;
+    }
+
+    80% {
+        counter-increment: count 80;
+    }
+
+    90% {
+        counter-increment: count 90;
+    }
+
+    100% {
+        counter-increment: count 100;
+    }
+}
+
+
+.doodads {
+    width: 80px;
+    padding-right: 30px;
+}
+
+#inventory-info {
+    position: absolute;
+    height: 200px;
+    width: 95px;
+    top: 3%;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#inventory-info>* {
+    position: absolute;
+}
+
+#inventory-info.inventory-open {
+    right: 350px;
+}
+
+.shed {
+    z-index: 4;
+    width: 55px;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inventory-tab {
+    height: 200px;
+    right: 0;
+}
+
+#wrapper {
+    position: relative;
+    width: 350px;
+    height: 100%;
+    background-color: #FFA192;
+    border-left: 12px solid #995037;
+    z-index: 8;
+    top: 0;
+    right: 0;
+}
+
+#inside-inventory>* {
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+.inventory-seed,
+.inventory-feeder {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+.seed-bag,
+.simple-feeder {
+    padding-top: 20px;
+    height: 125px;
+    padding-right: 20px;
+}
+
+.seed-bag:hover, .simple-feeder:hover{
+    height: 140px;
+    transition: all 0.8s;
+}
+
+.inventory-seed-desc,
+.inventory-feeder-desc {
+    font-family: "new-farm", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
