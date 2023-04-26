@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.typekit.net/qis6yta.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="shortcut icon" href="images/favicon.svg">
+
+    <script src="https://kit.fontawesome.com/22570c649a.js" crossorigin="anonymous"></script>
+
+    <title>Bird Feeder Game</title>
+</head>
+
+<body>
+
+    <div class="temporal-container">
+        <div class="clock-weather">
+            <div id="clock" class="clock running">
+                <img src="images/clock/clock_mid.svg" class="clock-mid">
+                <img src="images/clock/clock_hour.svg" class="clock-hour">
+                <img src="images/clock/clock_min.svg" class="clock-min">
+                <img src="images/clock/clock_face.svg" class="clock-face">
+            </div>
+
+            <div id="weather" class="weather">
+                <div class="weather-icon">
+                    <img src="images/partly_cloudy/pc.svg" class="pc">
+                    <p class="safe">partly cloudy</p>
+                </div>
+
+                <div class="weather-icon">
+                    <img src="images/cloudy/cloudy_cloud.svg" class="cloudy-cloud">
+                    <p class="iffy">cloudy</p>
+                </div>
+                
+                <div class="weather-icon">
+                    <img src="images/sunny/sunny_sun.svg" class="sunny-sun">
+                    <p class="safe">sunny</p>
+                </div>
+            
+                <div class="weather-icon">
+                    <img src="images/rainy/rainy_rain.svg" class="rainy-rain">
+                    <p class="iffy">rainy</p>
+                </div>
+
+                <div class="weather-icon">
+                    <img src="images/lightning/lightning_cloud.svg" class="lightning-cloud">
+                    <p class="bad">stormy</p>
+                </div>
+
+                <div class="weather-icon">
+                    <img src="images/snowy/snowy_cloud.svg" class="snowy-cloud">
+                    <p class="bad">snowy</p>
+                </div>
+                
+                <div class="weather-icon">
+                    <img src="images/clear_night/clear_night_moon.svg" class="clear-moon">
+                    <p class="safe">clear night</p>
+                </div>
+
+                <div class="weather-icon">
+                    <img src="images/partly_cloudy_night/pc_night.svg" class="pc-night">
+                    <p class="safe">partly cloudy</p>
+                </div>
+                
+                <div class="weather-icon">
+                    <img src="images/windy/windy_wind.svg" class="windy-wind">
+                    <p class="bad">windy</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="feeder-seed">
+
+        <div id="bird-on-feeder">
+            <img src="images/feeder_bird/bird.svg" class="bird">
+            <div class="text-box">
+                <p><strong>summer tanager</strong>
+                    <br>
+                    common
+                    <br>
+                    +$
+                </p>
+            </div>
+        </div>
+
+        <div id="bird2-on-feeder">
+            <img src="images/feeder_bird/bird2.svg" class="bird-two">
+            <div class="text-box2">
+                <p><strong>golden winged warbler</strong>
+                    <br>
+                    RARE
+                    <br> 
+                    +$$$
+                </p>
+            </div>
+        </div>
+
+        <img src="images/feeder/feeder.svg" class="bird-feeder">
+
+        <div class="inside-seed">
+            <img src="images/feeder_seed/seed_full.png" class="seed-full seed">
+            <img src="images/feeder_seed/seed_3quarter.png" class="seed-3quarter seed">
+            <img src="images/feeder_seed/seed_half.png" class="seed-half seed">
+            <img src="images/feeder_seed/seed_quarter.png" class="seed-quarter seed">
+            <div class="seed"></div>
+        </div>
+
+        <div id="seed-info">
+            <div id="seed-btn">
+                <img src="images/seeds/seeds.png" class="seeds">
+                <p>refill</p>
+            </div>
+
+            <img src="images/seeds/seeds_bar.svg" class="seeds-bar">
+
+            <div class="status-display">
+                <div class="bar-status-full bar"></div>
+                <div class="bar-status-3quarter bar"></div>
+                <div class="bar-status-half bar"></div>
+                <div class="bar-status-quarter bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="doodads-info">
+
+        <img src="images/doodads/doodads container.svg" class="doodads-container">
+
+        <div class="doodads-amount">
+            <div>
+                <img src="images/doodads/doodads.svg" class="doodads">
+            </div>
+            <div id="doodad-counter">
+                $ <span class="amount"></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="inventory">
+
+        <div id="inventory-info">
+            <img src="images/inventory/inventory_shed.svg" class="shed">
+            <img src="images/inventory/inventory_tab.svg" class="inventory-tab">
+        </div>
+
+        <div id="inside-inventory">
+            <div id="wrapper">
+                <div class="inventory-items">
+                    <ul>
+                        <h2>inventory</h2>
+                        <li class="inventory-seed">
+                            <div>
+                                <img src="images/inventory_seed_bag/seed_bag.svg" class="seed-bag">
+                            </div>
+    
+                            <div>
+                                <p class="inventory-seed-desc">
+                                    <strong>1 bag</strong>
+                                    <br>
+                                    regular seed
+                                </p>
+                            </div>
+                        </li>
+    
+                        <li class="inventory-feeder">
+                            <div>
+                                <img src="images/inventory_feeder/inventory_feeder.svg" class="simple-feeder">
+                            </div>
+                            <div>
+                                <p class="inventory-feeder-desc">
+                                    <strong>
+                                        simple feeder
+                                    </strong>
+                                    <br>
+                                    x1 birds
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="shop">
+        <div id="shop-info">
+            <img src="images/shop/shop_cart.svg" class="cart">
+            <img src="images/shop/shop_tab.svg" class="shop-tab">
+        </div>
+
+        <div id="inside-shop">
+            <div id="wrapper-two">
+                <div class="shop-items">
+                    <ul>
+                        <h2>shop</h2>
+                        <li class="shop-reg-seed">
+                            <div>
+                                <img src="images/inventory_seed_bag/seed_bag.svg" class="seed-bag shop-img">
+                            </div>
+    
+                            <div>
+                                <p class="shop-desc">
+                                    <strong>regular seed</strong>
+                                    <br>
+                                    $10 per bag
+                                    <br>
+                                    <i class="fa-solid fa-arrow-up"></i> 100% common birds
+                                    <br>
+                                    0.5% RARE birds
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="shop-prem-seed">
+                            <div>
+                                <img src="images/shop_items/prem_seed.svg" class="prem-seed shop-img">
+                            </div>
+    
+                            <div>
+                                <p class="shop-desc">
+                                    <strong>premium seed</strong>
+                                    <br>
+                                    $300 per bag
+                                    <br>
+                                    100% common birds
+                                    <br>
+                                    <i class="fa-solid fa-arrow-up"></i> 60% RARE birds
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="shop-dbl-feeder">
+                            <div>
+                                <img src="images/shop_items/double_feeder.svg" class="dbl-feeder shop-img">
+                            </div>
+    
+                            <div>
+                                <p class="shop-desc">
+                                    <strong>double feeder</strong>
+                                    <br>
+                                    $400
+                                    <br>
+                                    x4 birds
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="shop-cyl-feeder">
+                            <div>
+                                <img src="images/shop_items/cylinder_feeder.svg" class="cyl-feeder shop-img">
+                            </div>
+    
+                            <div>
+                                <p class="shop-desc">
+                                    <strong>cylinder feeder</strong>
+                                    <br>
+                                    $100
+                                    <br>
+                                    x2 birds
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
